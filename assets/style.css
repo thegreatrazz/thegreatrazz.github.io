@@ -1,0 +1,231 @@
+@import url("https://rsms.me/inter/inter.css");
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  background: white;
+  color: black; }
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif; } }
+body {
+  background: white;
+  color: black;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.25em; }
+
+@media screen {
+  a {
+    color: unset;
+    text-decoration: unset;
+    position: relative;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25); }
+    a::before {
+      position: absolute;
+      background: white;
+      content: "";
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      transition: height .1s;
+      mix-blend-mode: exclusion; }
+    a:hover::before {
+      height: 100%; } }
+@media print {
+  a {
+    text-decoration: underline;
+    white-space: unset;
+    padding: unset;
+    color: unset; }
+    a::before {
+      content: unset; } }
+
+a.normal-link {
+  text-decoration: underline;
+  white-space: unset;
+  padding: unset; }
+  a.normal-link::before {
+    content: unset; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 0.5em 10%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 1em 0 0.25em;
+  line-height: 1.25em; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    opacity: .75;
+    font-size: .70em; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+h6 {
+  font-size: 0.8em; }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 38px;
+  border-left: 2px solid; }
+
+main {
+  background: white;
+  color: black;
+  padding-bottom: 1px; }
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  border-top: 1px solid black; }
+
+.container {
+  width: 85vw;
+  min-width: 300px;
+  max-width: 768px;
+  margin: auto; }
+
+nav {
+  font-size: 0;
+  border-bottom: 2px solid black; }
+  nav a {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 8px !important;
+    padding-bottom: 6px !important; }
+    nav a::before {
+      height: 0; }
+  nav span {
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    padding-left: 8px; }
+
+body.home-layout {
+  background: url(/assets/home_background.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  body.home-layout main {
+    padding: 0 16px;
+    max-width: 640px;
+    min-width: 300px;
+    width: 75vw;
+    border-radius: 8px;
+    box-sizing: border-box; }
+    body.home-layout main h1 {
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: 900;
+      font-style: oblique;
+      margin: 32px 0; }
+    body.home-layout main footer {
+      font-size: 12px;
+      border: none;
+      padding-top: 0; }
+
+body.resume-layout header {
+  padding-bottom: 16px; }
+  body.resume-layout header h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: oblique; }
+  body.resume-layout header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 0; }
+    body.resume-layout header ul li {
+      display: inline-block;
+      font-size: 1rem;
+      width: 50%;
+      position: relative;
+      min-width: 280px; }
+      @media (max-width: 640px) {
+        body.resume-layout header ul li {
+          width: 100%; }
+          body.resume-layout header ul li.filler {
+            display: none; } }
+    body.resume-layout header ul a {
+      position: absolute;
+      left: 80px; }
+
+@media print {
+  body > nav, body footer {
+    display: none; } }
+.social-dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .social-dots a {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: unset;
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 4px;
+    transition: background .075s; }
+    .social-dots a:hover {
+      background: whitesmoke; }
+      .social-dots a:hover:active {
+        background: lightgray; }
+  .social-dots a:last-child {
+    margin-right: 0; }
+  .social-dots li {
+    margin-right: 4px; }
+    .social-dots li a {
+      margin: unset; }
+  .social-dots li:last-child {
+    margin-right: 0; }
+
+.supporter-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: -2px;
+  flex-wrap: wrap; }
+  .supporter-list > * {
+    font-size: 14px;
+    flex-grow: 1;
+    background: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 1px;
+    width: calc(50% - 8px);
+    text-align: center;
+    display: block;
+    margin: 2px; }
