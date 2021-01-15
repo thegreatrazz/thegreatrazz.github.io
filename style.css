@@ -1,0 +1,148 @@
+
+@import url('fonts.css');
+
+:root {
+    /* colors for retinal burnout mode */
+    --color-background:   #FAFAFA;
+    --color-foreground:   #212121;
+    --color-well:         #EEEEEE;
+    --color-accent-dark:  #8E44AD;
+    --color-accent-light: #9B59B6;
+
+    /* fonts */
+    --sans-font-family: "Inter", sans-serif;
+    --sans-font-size:   16px;
+    --mono-font-family: "DM Mono", monospace;
+    --mono-font-size:   var(--sans-font-size);
+
+    /* get going */
+    font-family: var(--sans-font-family);
+    font-size:   var(--sans-font-size);
+    font-weight: 500;
+    background:  var(--color-background);
+    color:       var(--color-foreground);
+    letter-spacing: -0.011em;
+}
+
+body {
+    margin: 8px;
+}
+
+@media only screen and (min-width: 400px) {
+    body {
+        margin: 5vw;
+    }
+}
+ 
+@media only screen and (min-width: 500px) {
+    body {
+        margin: 5vh 10vw;
+    }
+}
+
+/* container */
+
+main {
+
+}
+
+.container {
+
+}
+
+/* links */
+
+a {
+    color: var(--color-accent-dark);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    border-bottom: 1px solid;
+}
+
+/* headings */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* monospace */
+
+pre, code {
+    font-family: var(--mono-font-family);
+    font-size: var(--mono-font-size);
+    font-variant-ligatures: contextual;
+}
+
+/* blockquote */
+
+blockquote {
+    border: unset;
+    border-left: var(--color-foreground) solid 2px;
+    background: var(--color-well);
+    padding: 2px 8px;
+    padding-left: 16px;
+    margin: 1em 0;
+}
+
+/* header */
+
+body > header {
+    font-size: 14px;
+    background: var(--color-well);
+    padding: 8px;
+    border-radius: 32px;
+}
+
+body > header .back-button {
+    /* display: inline-block; */
+    position: relative;
+    padding: 8px;
+    border: none;
+    opacity: 0.8;
+    transition: transform .2s, opacity .5s;
+}
+
+body > header .back-button:hover {
+    opacity: 1;
+    transform: scaleX(5);
+}
+
+body > header .title {
+    font-weight: 600;
+}
+
+/* footer */
+
+body > footer {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* avatar */
+
+.img-avatar {
+    border-radius: 50%;
+    margin: 2em 0 1em;
+}
+
+/* emoji */
+
+.emoji {
+    font-style: normal;
+    font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+    font-weight: 400;
+}
+
+/* comfort mode: my eyes thank me */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background:   #212121;
+        --color-foreground:   #FAFAFA;
+        --color-well:         #333333;
+        --color-accent-dark:  #CE93D8;
+        --color-accent-light: #4A148C;
+    }
+}
